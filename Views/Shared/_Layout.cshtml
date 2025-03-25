@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @* <link rel="stylesheet" href="~/Higertech.styles.css" asp-append-version="true" /> *@
 
-    <link href="~/img/Logo/Logo.png" rel="icon">
-    <link href="~/img/Logo/Logo.png" rel="apple-touch-icon">
+    <link href="~/assets/img/Logo/Logo.png" rel="icon">
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -87,16 +87,17 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             <a class="navbar-brand" asp-area="" asp-controller="Main" asp-action="Index">
-                <img src="@Url.Content("~/img/Logo/Logo.png")" alt="" style="height: auto; max-height: 70px;">
+                <img src="@Url.Content("~/assets/img/Logo/Logo.png")" alt="" style="height: auto; max-height: 70px;">
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-area="" asp-controller="Main" asp-action="Index">Home</a></li>
                     <li><a sp-area="" asp-controller="Service" asp-action="Index">Service</a></li>
-                    <li><a sp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a></li>
-                    <li><a sp-area="" asp-controller="Activity" asp-action="Index">Portofolio</a></li>
-                    <li><a sp-area="" asp-controller="Article" asp-action="Index">Article</a></li>
+                    @* <li><a sp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a></li> *@
+                    <li><a sp-area="" asp-controller="Portofolio" asp-action="Index">Portofolio</a></li>
+                    @* <li><a sp-area="" asp-controller="Article" asp-action="Index">Article</a></li> *@
+                    <partial name="_LoginPartial" />
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

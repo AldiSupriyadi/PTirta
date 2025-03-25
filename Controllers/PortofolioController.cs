@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PTirta.Controllers
 {
-    public class ActivityController : Controller
+    public class PortofolioController : Controller
     {
         public IActionResult Index()
         {
