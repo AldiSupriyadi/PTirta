@@ -1,8 +1,314 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Main";
+    @* ViewData["HideFooter"] = true; *@
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<head>
+    <title>@ViewData["Title"] - PTirta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /*--------------------------------------------------------------
+# Carousel CSS
+--------------------------------------------------------------*/
+        #heroCarousel {
+
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: block;
+
+
+        }
+
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        /*--------------------------------------------------------------
+# About 
+--------------------------------------------------------------*/
+        .position-about {
+            max-width: 100%;
+            position: relative;
+            margin-top: -6cm;
+        }
+
+        .overlay-text p {
+            font-size: 20px;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        /*--------------------------------------------------------------
+# Service 
+--------------------------------------------------------------*/
+        .text-center h2 {
+            font-size: 32px;
+        }
+
+        .services {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 0 5%;
+        }
+
+        .service-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .service-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .service-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /*--------------------------------------------------------------
+# Visi Misi 
+--------------------------------------------------------------*/
+        .container {}
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            height: 50px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content img {
+            width: 40%;
+            border-radius: 5px;
+        }
+
+        .text {
+            width: 55%;
+        }
+
+        .text h2 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .text p {
+            font-size: 20px;
+            pad: 17cm;
+            color: #333;
+        }
+
+        .container h2 {
+            font-size: 32px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/assets/img/hero-carousel/hero-carousel-1.jpg" class="d-block w-100" alt="Hero Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="~/assets/img/hero-carousel/hero-carousel-2.jpg" class="d-block w-100" alt="Hero Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="~/assets/img/hero-carousel/hero-carousel-3.jpg" class="d-block w-100" alt="Hero Image 2">
+
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
 </div>
+
+<!-- About Section -->
+<section class="section">
+    <div class="position-about">
+        <img src="~/assets/img/Wave.svg" class=" w-100" alt="">
+        <div class="overlay-text position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h2>Tentang PT. Tirta</h2>
+            <p>PT.Tirta Rekayasa Konsultan berdiri pada tahun 2021 dan bergerak dalam bidang Konsultan Perencanaan dan
+                Pengawasan dalam Bidang Sumber Daya Air. Kami didukung oleh konsultan-konsultan profesional yang telah
+                berpengalaman dan berdedikasi tinggi dalam merencanakan, mereview dan melakukan pengawasan dalam
+                pekerjaan
+                di Bidang Sumber Daya Air.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container">
+        <h2>Layanan</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="~/assets/img/alt-services.jpg" alt="Service 1">
+                <h3>Analisa Hidrologi dan Hidroklimatologi</h3>
+                <p>Studi terkait curah hujan, debit air, dan siklus hidrologi.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/assets/img/alt-services.jpg" alt="Service 2">
+                <h3>Analisa Banjir</h3>
+                <p>Pemetaan dan mitigasi daerah rawan banjir.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/assets/img/alt-services.jpg" alt="Service 3">
+                <h3>Perencanaan Flood Early Warning System</h3>
+                <p>Penyusunan sistem peringatan dini terhadap banjir.</p>
+            </div>
+            <div class="service-item">
+                <img src="~/assets/img/alt-services.jpg" alt="Service 4">
+                <h3>Perencanaan Bangunan Air (Bendung, Embung, Bendungan, Irigasi)</h3>
+                <p>Desain dan perencanaan infrastruktur sumber daya air.</p>
+            </div>
+
+        </div>
+        <div class="more-btn">
+            <button onclick="window.location.href='/Service'">More Service</button>
+        </div>
+</section>
+
+
+
+<section class="section">
+
+    <body>
+        <div class="container">
+            <h1>Komitmen Untuk Sumber Daya Air Berkelanjutan</h1>
+            <div class="content" data-aos="fade-up">
+                <img src="~/img/Logo/Ben.jpg" alt="Gambar Konsultan">
+                <div class="text" data-aos="fade-up" data-aos-delay="100">
+                    <h3><strong>Vision</strong></h3>
+                    <p>PT. Tirta Rekayasa Konsultan menjadi konsultan perencana, perekayasa dan pengawasan terbaik dalam
+                        bidang sumber daya air dengan memberikan solusi dan nilai tambah bagi pelanggan.</p>
+                    <br><br><br>
+                    <h3><strong>Mision</strong></h3>
+                    <p>PT. Tirta Rekayasa Konsultan memberikan manfaat yang sebesar-besarnya sesuai dengan harapan
+                        pelanggan, dengan mengedepankan mutu dan ketepatan waktu.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</section>
+
+<section class="section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Portofolio</h2>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        @for (int i = 0; i < 1; i++)
+        {
+            <div>
+                <div class="row align-items-center mt-2 text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6 justify-content-center order-lg-1">
+                        <img src="/assets/img/higertech-default.png" alt="placeholder" class="img-fluid square-image">
+                    </div>
+                    <div class="col-lg-6 work-decs order-lg-2 order-1">
+                        <h1>portfolio 1</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio ab facilis quisquam eos...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="row align-items-center mt-2 text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6 work-decs order-lg-1 order-2">
+                        <h1>portfolio 2</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio ab facilis quisquam eos...
+                        </p>
+                    </div>
+                    <div class="col-lg-6 justify-content-center order-lg-2">
+                        <img src="/assets/img/higertech-default.png" alt="placeholder" class="img-fluid square-image">
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
+
+<section class="section">
+
+    <body>
+        <div class="container">
+            <!-- Banner besar di atas -->
+            <div class="banner"></div>
+
+            <!-- Judul Section -->
+            <div class="text-center">
+                <h2>Article</h2>
+            </div>
+
+            <!-- Grid untuk artikel -->
+            <div class="row">
+                @for (int i = 0; i < 3; i++)
+                {
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card article-card">
+                            <div class="article-image"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Judul Article</h5>
+                                <p class="card-text">Tanggal</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="more-btn">
+            <button onclick="window.location.href='/Article'">More Service</button>
+        </div>
+        </div>
+    </body>
+</section>

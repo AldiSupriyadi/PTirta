@@ -97,7 +97,7 @@
                     @* <li><a sp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a></li> *@
                     <li><a sp-area="" asp-controller="Portofolio" asp-action="Index">Portofolio</a></li>
                     @* <li><a sp-area="" asp-controller="Article" asp-action="Index">Article</a></li> *@
-                    <partial name="_LoginPartial" />
+                    <partial name="_LoginPartial"   />
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -105,7 +105,7 @@
     </header>
 
     @* <div class="container"> *@
-    <main role="main" class="pb-3 main">
+    <main>
         @RenderBody()
     </main>
     @* </div> *@
