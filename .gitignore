@@ -26,6 +26,8 @@ bin/
 obj/
 Debug/
 Release/
+appsettings.json
+appsettings.*.json
 
 # .NET Core
 project.lock.json
