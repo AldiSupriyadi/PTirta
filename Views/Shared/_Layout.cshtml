@@ -76,10 +76,6 @@
             font-weight: 500;
             text-decoration: none;
         }
-
-        .navmenu ul li a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
@@ -93,9 +89,9 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-area="" asp-controller="Main" asp-action="Index">Home</a></li>
-                    <li><a sp-area="" asp-controller="Service" asp-action="Index">Service</a></li>
+                    <li><a asp-area="" asp-controller="Service" asp-action="Index">Service</a></li>
                     @* <li><a sp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a></li> *@
-                    <li><a sp-area="" asp-controller="Portofolio" asp-action="Index">Portofolio</a></li>
+                    <li><a asp-area="" asp-controller="Portofolio" asp-action="Index">Portofolio</a></li>
                     @* <li><a sp-area="" asp-controller="Article" asp-action="Index">Article</a></li> *@
                     <partial name="_LoginPartial"   />
                 </ul>
