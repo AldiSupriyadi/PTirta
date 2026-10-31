@@ -2531,7 +2531,9 @@ iframe {
 
 .more-btn {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+  
 }
 
 .more-btn button {
@@ -2551,10 +2553,7 @@ iframe {
   background-color: #006eff;
 }
 
-body {
-  background-color: #f8f9fa;
-  font-family: Arial, sans-serif;
-}
+
 
 /* Artikel Grid */
 .article-card {

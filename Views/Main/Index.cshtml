@@ -37,10 +37,10 @@
         /*--------------------------------------------------------------
 # About 
 --------------------------------------------------------------*/
-        .position-about {
+        .about-titles {
             max-width: 100%;
             position: relative;
-            margin-top: -6cm;
+            margin-top: -4cm;
         }
 
         .overlay-text p {
@@ -60,6 +60,7 @@
         .services {
             text-align: center;
             padding: 40px 0;
+
         }
 
         .services h2 {
@@ -74,6 +75,7 @@
             gap: 20px;
             justify-content: center;
             padding: 0 5%;
+            margin-bottom: 40px;
         }
 
         .service-item {
@@ -105,7 +107,6 @@
         /*--------------------------------------------------------------
 # Visi Misi 
 --------------------------------------------------------------*/
-        .container {}
 
         h1 {
             text-align: center;
@@ -141,8 +142,10 @@
 
         .container h2 {
             font-size: 32px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-align: center;
+            margin-top: 50px;
+            color: rgb(39, 39, 39);
         }
     </style>
 </head>
@@ -171,7 +174,7 @@
 
 <!-- About Section -->
 <section class="section">
-    <div class="position-about" data-aos="fade-up">
+    <div class="about-titles" data-aos="fade-up">
         <img src="~/assets/img/Wave.svg" class=" w-100" alt="">
         <div class="overlay-text position-absolute top-50 start-50 translate-middle text-center text-white">
             <h2>Tentang PT. Tirta</h2>
@@ -186,7 +189,7 @@
 
 
 <section class="section">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h2>Layanan</h2>
         <div class="service-grid">
             <div class="service-item">
@@ -207,7 +210,7 @@
 
 
         </div>
-        <div class="more-btn">
+        <div class="more-btn" data-aos="fade-up">
             <button onclick="window.location.href='/Service'">More Service</button>
         </div>
 </section>
@@ -215,28 +218,25 @@
 
 
 <section class="section">
-
-    <body>
-        <div class="container">
-            <h1>Komitmen Untuk Sumber Daya Air Berkelanjutan</h1>
-            <div class="content" data-aos="fade-up">
-                <img src="~/assets/img/constructions-1.jpg" alt="Gambar Konsultan">
-                <div class="text" data-aos="fade-up" data-aos-delay="100">
-                    <h3><strong>Vision</strong></h3>
-                    <p>PT. Tirta Rekayasa Konsultan menjadi konsultan perencana, perekayasa dan pengawasan terbaik dalam
-                        bidang sumber daya air dengan memberikan solusi dan nilai tambah bagi pelanggan.</p>
-                    <br><br><br>
-                    <h3><strong>Mision</strong></h3>
-                    <p>PT. Tirta Rekayasa Konsultan memberikan manfaat yang sebesar-besarnya sesuai dengan harapan
-                        pelanggan, dengan mengedepankan mutu dan ketepatan waktu.</p>
-                </div>
+    <div class="container" data-aos="fade-up">
+        <h2>Komitmen Untuk Sumber Daya Air Berkelanjutan</h2>
+        <div class="content" data-aos="fade-up">
+            <img src="~/assets/img/constructions-1.jpg" alt="Gambar Konsultan">
+            <div class="text" data-aos="fade-up" data-aos-delay="100">
+                <h3><strong>Vision</strong></h3>
+                <p>PT. Tirta Rekayasa Konsultan menjadi konsultan perencana, perekayasa dan pengawasan terbaik dalam
+                    bidang sumber daya air dengan memberikan solusi dan nilai tambah bagi pelanggan.</p>
+                <br><br><br>
+                <h3><strong>Mision</strong></h3>
+                <p>PT. Tirta Rekayasa Konsultan memberikan manfaat yang sebesar-besarnya sesuai dengan harapan
+                    pelanggan, dengan mengedepankan mutu dan ketepatan waktu.</p>
             </div>
         </div>
-    </body>
+    </div>
 </section>
 
 <section class="section">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <h2 class="text-center">Portofolio</h2>
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
@@ -263,12 +263,17 @@
                     laudantium tempora ipsam?</p>
             </div>
         </div>
+        <div class="more-btn mt-4" data-aos="fade-up">
+            <button onclick="window.location.href='/Portofolio'">More Portofolio</button>
+        </div>
 </section>
+
+
 
 <section class="section">
 
     <body>
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <!-- Banner besar di atas -->
             <div class="banner"></div>
 
@@ -293,7 +298,7 @@
                 }
             </div>
         </div>
-        <div class="more-btn">
+        <div class="more-btn" data-aos="fade-up">
             <button onclick="window.location.href='/Article'">More Service</button>
         </div>
         </div>
